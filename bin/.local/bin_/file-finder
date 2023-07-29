@@ -1,0 +1,5 @@
+#!/bin/bash
+
+selected=$(find ~/iith ~/personal ~/Downloads -mindepth 1 -maxdepth 2 -type f | fzf)
+mkdir -p ~/search/
+cp $selected ~/search/.
