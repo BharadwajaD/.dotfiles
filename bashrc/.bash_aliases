@@ -1,5 +1,6 @@
 alias vim="nvim"
 alias open="xdg-open"
+alias maelstrom=~/tools/maelstrom/maelstrom
 
 
 # for tmux
