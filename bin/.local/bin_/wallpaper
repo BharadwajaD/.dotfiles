@@ -1,3 +1,3 @@
 #!/bin/bash
 selected=$(find -L ~/Pictures/wallpapers -maxdepth 3 -type f | fzf)
-feh --bg-fill $selected
+dconf write /org/mate/desktop/background/picture-filename "'$selected'"

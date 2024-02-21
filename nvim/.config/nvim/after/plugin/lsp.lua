@@ -1,15 +1,16 @@
-local lsp = require("lsp-zero")
-lsp.preset("recommended")
+  local lsp_zero = require('lsp-zero')
 
-lsp.ensure_installed({
-  'rust_analyzer',
-  'clangd',
-  'tsserver',
-  'gopls',
-  'lua_ls'
-})
+  require('mason').setup({})
+  require('mason-lspconfig').setup({
+    -- Replace the language servers listed here 
+    -- with the ones you want to install
+    ensure_installed = {'tsserver', 'rust_analyzer', 'gopls', 'pyright', 'html', 'jdtls'},
+    handlers = {
+      lsp_zero.default_setup,
+    },
+  })
 
-lsp.set_preferences({
+lsp_zero.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
         error = 'E',
@@ -20,7 +21,7 @@ lsp.set_preferences({
 })
 
 
-lsp.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
   if client.name == "eslint" then
@@ -40,7 +41,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<localleader>f", vim.lsp.buf.format, opts)
 end)
 
-lsp.setup()
+lsp_zero.setup()
 
 local cmp = require('cmp')
 
