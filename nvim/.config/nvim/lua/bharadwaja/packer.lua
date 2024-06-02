@@ -2,7 +2,9 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use 'ThePrimeagen/vim-be-good'
-    use { "rose-pine/neovim", as = "rose-pine" }
+
+    use{ "rose-pine/neovim", }
+    use { 'embark-theme/vim', as = 'embark' }
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -40,5 +42,6 @@ return require('packer').startup(function(use)
     use ('rust-lang/rust.vim')
     use ('darrikonn/vim-gofmt')
     use ('morhetz/gruvbox')
+
 
 end)

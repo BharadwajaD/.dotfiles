@@ -1,14 +1,13 @@
--- Treesitter
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"cpp", "comment", "typescript", "rust", "go"},
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-}
+function ColorIt(scheme)
+
+    vim.cmd("colorscheme " .. scheme)
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end
+
 
 require("rose-pine").setup({
     disable_background = true,
 })
 
-vim.cmd("colorscheme rose-pine")
+ColorIt("rose-pine")

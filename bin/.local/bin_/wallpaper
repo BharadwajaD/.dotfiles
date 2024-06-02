@@ -1,3 +1,20 @@
 #!/bin/bash
-selected=$(find -L ~/Pictures/wallpapers -maxdepth 3 -type f | fzf)
+
+while getopts "rcf:" flag; do
+    case $flag in
+        f)
+            selected=$OPTARG
+            ;;
+        r)
+            selected=$(find -L ~/Pictures/wallpapers -maxdepth 3 -type f | shuf --head-count=1)
+            ;;
+        c)
+            selected=$(find -L ~/Pictures/wallpapers -maxdepth 3 -type f | fzf)
+            ;;
+        \?)
+            echo "Invalid flag"
+            ;;
+    esac
+done
+
 dconf write /org/mate/desktop/background/picture-filename "'$selected'"

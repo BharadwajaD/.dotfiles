@@ -105,4 +105,4 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bash_aliases
 
 bindkey -s ^t "tmux-sessionizer\n"
-bindkey -s ^w "wallpaper\n"
+bindkey -s ^w "wallpaper -c\n"

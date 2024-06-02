@@ -178,10 +178,10 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-#bar {
-    #status_command i3status
+bar {
+    status_command i3status
         #tray_output primary
-#}
+}
 
 bindsym $mod+g exec google-chrome
 bindsym $mod+b exec firefox -p
@@ -197,3 +197,4 @@ for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4
 exec xinput set-prop "SYNA3296:00 06CB:CD50 Touchpad" "libinput Natural Scrolling Enabled" 1
 exec xinput set-prop "SYNA3296:00 06CB:CD50 Touchpad"  "libinput Tapping Enabled" 1
 exec ~/.fehbg
+exec compton

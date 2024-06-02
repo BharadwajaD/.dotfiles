@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/brad/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["flappy-bird"] = {
+    loaded = true,
+    path = "/home/brad/.local/share/nvim/site/pack/packer/start/flappy-bird",
+    url = "/home/brad/personal/flappy-bird"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/brad/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -133,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brad/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  neovim = {
+    loaded = true,
+    path = "/home/brad/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
   },
   ["nvim-cmp"] = {
     loaded = true,
