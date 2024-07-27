@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts "rcf:" flag; do
+while getopts "rcf:o:" flag; do
     case $flag in
         f)
             selected=$OPTARG
@@ -10,6 +10,9 @@ while getopts "rcf:" flag; do
             ;;
         c)
             selected=$(find -L ~/Pictures/wallpapers -maxdepth 3 -type f | fzf)
+            ;;
+        o)
+            zoom_opt=$OPTARG
             ;;
         \?)
             echo "Invalid flag"

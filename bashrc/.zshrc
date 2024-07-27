@@ -101,8 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 source ~/.bash_aliases
+
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
 bindkey -s ^t "tmux-sessionizer\n"
 bindkey -s ^w "wallpaper -c\n"
